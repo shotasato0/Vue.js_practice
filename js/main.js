@@ -1,4 +1,11 @@
 const app = Vue.createApp({
-  data: () => ({}),
+  data: () => ({
+
+  }),
+  methods: {
+    addItem: function(event) {
+      console.log('clicked!')
+    }
+  }
 });
 app.mount("#app");
