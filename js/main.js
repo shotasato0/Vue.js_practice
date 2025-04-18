@@ -9,6 +9,7 @@ const app = Vue.createApp({
       let todo = {
         Item: this.newItem
       }
+      this.todos.push(todo)
     }
   }
 });
