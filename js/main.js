@@ -5,13 +5,13 @@ const app = Vue.createApp({
   }),
   methods: {
     addItem: function(event) {
-      console.log('clicked!')
-      let todo = {
+      // console.log('clicked!')
+      const todo = {
         Item: this.newItem
       }
       this.todos.push(todo)
       this.newItem = ''
-    }
+    },
   }
 });
 app.mount("#app");

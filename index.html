@@ -13,11 +13,11 @@
         <input type="text" v-model="newItem">
         <button v-on:click="addItem">Add</button>
       </form>
-      <ul>
-        <li v-for="todo in todos">
-          <span>{{ todo.Item }}</span>
+      <ol>
+        <li v-for="prop in todos">
+          <span>{{ prop.Item }}</span>
         </li>
-      </ul>
+      </ol>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.1.5"></script>
     <script src="js/main.js"></script>
