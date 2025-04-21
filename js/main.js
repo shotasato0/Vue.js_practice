@@ -7,7 +7,8 @@ const app = Vue.createApp({
     addItem: function(event) {
       // console.log('clicked!')
       const todo = {
-        Item: this.newItem
+        Item: this.newItem,
+        isDone: false
       }
       this.todos.push(todo)
       this.newItem = ''
