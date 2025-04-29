@@ -1,0 +1,21 @@
+name: Notify Slack on Push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  slack-notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send notification to Slack
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          payload: |
+            {
+              "text": "✅ 新しいコードがmasterブランチにPushされました！"
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
